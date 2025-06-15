@@ -1,0 +1,120 @@
+.app-header {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-color) !important;
+  box-shadow: var(--shadow-sm) !important;
+  color: var(--text-primary) !important;
+  z-index: var(--z-header) !important;
+}
+
+.header-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px !important;
+  min-height: 64px !important;
+}
+
+.app-header {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-color) !important;
+  box-shadow: var(--shadow-sm) !important;
+  color: var(--text-primary) !important;
+  z-index: var(--z-header) !important;
+}
+
+.header-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px !important;
+  min-height: 64px !important;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: var(--transition);
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.header-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  transition: var(--transition);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+
+  &:hover {
+    transform: rotate(5deg);
+    filter: drop-shadow(0 4px 8px rgba(99, 102, 241, 0.3));
+  }
+}
+
+.header-title {
+  font-weight: 700 !important;
+  color: var(--primary-color) !important;
+  font-size: 1.5rem !important;
+  margin: 0 !important;
+}
+
+.header-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-avatar {
+  width: 36px !important;
+  height: 36px !important;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+}
+
+.header-username {
+  font-weight: 500 !important;
+  color: var(--text-primary) !important;
+}
+
+.header-logout {
+  color: var(--text-secondary) !important;
+  transition: var(--transition) !important;
+
+  &:hover {
+    color: var(--primary-color) !important;
+    transform: scale(1.05);
+  }
+}
+
+.menu-toggle {
+  margin-right: 16px !important;
+  color: var(--text-primary) !important;
+}
+
+@media (max-width: 768px) {
+  .header-username {
+    display: none;
+  }
+
+  .header-toolbar {
+    padding: 0 16px !important;
+  }
+
+  .header-logo {
+    gap: 8px;
+  }
+
+  .header-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .header-title {
+    font-size: 1.25rem !important;
+  }
+}
