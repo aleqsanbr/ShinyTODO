@@ -1,0 +1,123 @@
+.task-item {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--border-radius) !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: var(--transition) !important;
+  animation: slideInUp 0.3s ease-out;
+
+  &:hover {
+    box-shadow: var(--shadow-md) !important;
+    transform: translateY(-2px);
+    border-color: rgba(99, 102, 241, 0.3) !important;
+  }
+
+  &.completed {
+    opacity: 0.7;
+    background: rgba(34, 197, 94, 0.05) !important;
+    border-color: rgba(34, 197, 94, 0.2) !important;
+  }
+
+  &.overdue {
+    border-left: 4px solid var(--error-color) !important;
+    background: rgba(239, 68, 68, 0.02) !important;
+  }
+}
+
+.task-content {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 16px;
+}
+
+.task-checkbox {
+  margin-top: -2px;
+
+  .MuiSvgIcon-root {
+    font-size: 24px;
+  }
+}
+
+.task-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.task-title {
+  font-weight: 600 !important;
+  color: var(--text-primary) !important;
+  margin-bottom: 8px !important;
+  font-size: 1.1rem !important;
+  line-height: 1.4 !important;
+
+  &.strikethrough {
+    text-decoration: line-through;
+    color: var(--text-secondary) !important;
+  }
+}
+
+.task-description {
+  color: var(--text-secondary) !important;
+  margin-bottom: 12px !important;
+  line-height: 1.5 !important;
+}
+
+.task-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.task-date {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-secondary);
+
+  .MuiSvgIcon-root {
+    font-size: 16px;
+  }
+}
+
+.task-actions {
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: var(--transition);
+
+  .task-item:hover & {
+    opacity: 1;
+  }
+
+  .MuiIconButton-root {
+    width: 36px;
+    height: 36px;
+    color: var(--text-secondary);
+
+    &:hover {
+      background: rgba(99, 102, 241, 0.1);
+      color: var(--primary-color);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .task-content {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .task-actions {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .task-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
