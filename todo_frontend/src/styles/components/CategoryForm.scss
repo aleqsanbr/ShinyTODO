@@ -1,0 +1,101 @@
+.category-dialog {
+  .MuiDialog-paper {
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--shadow-lg) !important;
+    padding: 15px;
+  }
+}
+
+.category-form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px !important;
+}
+
+.category-color-section {
+  margin-bottom: 8px;
+
+  .section-title {
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  max-width: 300px;
+}
+
+.color-option {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #e0e0e0;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
+
+  &.selected {
+    border: 3px solid #1976d2;
+  }
+}
+
+.color-preview {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .preview-circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #e0e0e0;
+  }
+
+  .preview-text {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+  }
+}
+
+.form-field {
+  .MuiOutlinedInput-root {
+    border-radius: 10px;
+    transition: var(--transition);
+
+    &:hover {
+      box-shadow: var(--shadow-sm);
+    }
+
+    &.Mui-focused {
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    }
+  }
+}
+
+.form-actions {
+  padding: 16px 24px !important;
+  gap: 12px;
+
+  .MuiButton-contained {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+    border-radius: 8px !important;
+    text-transform: none !important;
+    font-weight: 600 !important;
+    padding: 10px 24px !important;
+  }
+
+  .MuiButton-text {
+    color: var(--text-secondary) !important;
+    text-transform: none !important;
+    font-weight: 500 !important;
+  }
+}
