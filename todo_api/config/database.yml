@@ -2,15 +2,18 @@ default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  url: mysql2://root:password@127.0.0.1:3306/
+  host: <%= ENV.fetch("DATABASE_HOST", "127.0.0.1") %>
+  port: 3306
+  username: <%= ENV.fetch("DATABASE_USERNAME", "root") %>
+  password: <%= ENV.fetch("DATABASE_PASSWORD", "password") %>
 
 development:
   <<: *default
-  url: mysql2://root:password@127.0.0.1:3306/todo_api_development
+  database: <%= ENV.fetch("DATABASE_NAME", "todo_api_development") %>
 
 test:
   <<: *default
-  url: mysql2://root:password@127.0.0.1:3306/todo_api_test
+  database: todo_api_test
 
 production:
   <<: *default
